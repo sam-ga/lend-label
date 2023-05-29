@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-(async function (){
+export default async function (){
   try {
     await mongoose.connect(process.env.DB_URI)
     const db = mongoose.connection
@@ -8,4 +8,4 @@ import mongoose from 'mongoose'
   } catch (err) {
     console.log(err)
   }
-})()
+}

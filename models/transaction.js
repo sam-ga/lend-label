@@ -5,7 +5,7 @@ export default mongoose.model('Transaction', new mongoose.Schema({
   client: { type: mongoose.Schema.ObjectId, required: true, ref: 'Client' },
   items: [{ type: mongoose.Schema.ObjectId, required: true, ref: 'Item' }],
   status: {
-    returned: Boolean,
+    returned: { type: Boolean },
     lastUpdated: { type: Date, required: true }
   },
   transactionId: { type: String, required: true }
